@@ -1,6 +1,6 @@
 {
   "name": "dsh-choice",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Turns a choice-style ending into a native DSH question card, including a later/dismiss option.",
   "type": "module",
   "exports": {
