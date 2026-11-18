@@ -1,0 +1,34 @@
+{
+  "name": "dsh-choice",
+  "version": "0.2.3",
+  "type": "module",
+  "description": "Turns a choice-style ending into a native DSH question card, including a later/dismiss option.",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "prepublishOnly": "node -e \"const fs=require(\u0027fs\u0027);const bad=[];for(const f of [\u0027package.json\u0027,\u0027cordis.patch.yml\u0027,\u0027client.js\u0027,\u0027index.js\u0027]){try{const b=fs.readFileSync(f);if(b[0]===0xEF\u0026\u0026b[1]===0xBB\u0026\u0026b[2]===0xBF)bad.push(f)}catch(e){}}if(bad.length){console.error(\u0027UTF-8 BOM in: \u0027+bad.join(\u0027, \u0027));process.exit(1)}JSON.parse(fs.readFileSync(\u0027package.json\u0027,\u0027utf8\u0027));console.log(\u0027manifest ok\u0027)\""
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "deepseek-harness"
+  ]
+}

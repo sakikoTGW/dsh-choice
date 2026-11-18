@@ -1,0 +1,4 @@
+# dsh-choice bundle patch: Host(识别选项 + 发布 + 投递) + Client(输入框上方的选项条)。
+- insert:
+    - id: dsh-choice
+      name: 'dsh-choice'
